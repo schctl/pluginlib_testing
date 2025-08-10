@@ -1,0 +1,9 @@
+<library path="pkg_b">
+  <class name="pkg_b/PluginImpl"
+         type="pkg_b::PluginImpl"
+         base_class_type="pkg_a::BaseInterface">
+    <description>
+      Example plugin implementation of BaseInterface.
+    </description>
+  </class>
+</library>
