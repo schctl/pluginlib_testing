@@ -1,7 +1,7 @@
 <library path="pkg_b">
-  <class name="pkg_b/PluginImpl"
-         type="pkg_b::PluginImpl"
-         base_class_type="pkg_a::BaseInterface">
+  <class name="pkg_b::RobStride"
+         type="pkg_b::RobStride"
+         base_class_type="ActuatorInterface">
     <description>
       Example plugin implementation of BaseInterface.
     </description>

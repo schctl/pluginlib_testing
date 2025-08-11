@@ -1,5 +1,5 @@
 #include <pluginlib/class_loader.hpp>
-#include "pkg_a/plugin_base.hpp"
+#include "totem_manipulation_hardware_interface/plugin_base.hpp"
 
 int main(int argc, char** argv)
 {
@@ -7,11 +7,12 @@ int main(int argc, char** argv)
   (void) argc;
   (void) argv;
 
-  pluginlib::ClassLoader<pkg_a::BaseInterface> plugin_loader("pkg_a", "pkg_a::BaseInterface");
+  pluginlib::ClassLoader<ActuatorInterface> plugin_loader("pkg_a", "ActuatorInterface");
 
   try
   {
-    std::shared_ptr<pkg_a::BaseInterface> driver = plugin_loader.createSharedInstance("pkg_b::PluginImpl");
+    std::shared_ptr<ActuatorInterface> driver = plugin_loader.createSharedInstance("pkg_b::RobStride");
+    driver->stop();
   }
   catch(pluginlib::PluginlibException& ex)
   {

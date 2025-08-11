@@ -4,6 +4,10 @@ project(pkg_b)
 find_package(ament_cmake REQUIRED)
 
 add_library(pkg_b SHARED src/plugin_impl.cpp)
+target_include_directories(pkg_b PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
+)
 
 ## ----- Dependencies -----------------------------------------
 
